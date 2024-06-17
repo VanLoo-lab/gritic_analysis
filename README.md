@@ -22,8 +22,10 @@ These scripts produce the figures for the manuscript.
 - ```event_proportions_relative_to_wgd_probabilistic.py``` Produces figures 4C,D and supplementary figures 42-49.
 - ```fraction_of_gains_job.py``` Produces figure 3D and supplementary figures 28A-B. Requires ```pre_post_permute_job.py``` to be run first.
 - ```gain_distributions_across_samples.py``` Produces figure 3C.
+- ```GainClassificationAnalysis.R``` Produces supplementary figure 36, requires access to raw PCAWG data.
+- ```GainClassifier.R``` Helper script for ```GainClassificationAnalysis.R```.
 - ```generic_gain_histograms.py``` Produces supplementary figure 27.
-- ```hartwig_multiregion.py``` Produces supplementary figure 12.
+- ```hartwig_multiregion.py``` Produces supplementary figure 12. Requires raw data to run.
 - ```hartwig_pcawg_copy_number_export.R``` A precursor script for ```cn_wgd_figures.py```.
 - ```major_3_4_analysis.py``` Produces supplementary figure 20.
 - ```major_cn_timing_job.py``` Produces figures 2E,F and supplementary figure 22.
