@@ -30,7 +30,7 @@ These scripts produce the figures for the manuscript.
 - ```major_3_4_analysis.py``` Produces supplementary figure 20.
 - ```major_cn_timing_job.py``` Produces figures 2E,F and supplementary figure 22.
 - ```make_sample_timing_plots.py``` Plots sample gain timing posteriors, a precursor to supplementary figures 19 and 26.
-- ```min_dist_nearest_timing.R``` Helper function for ```permutation_final_prior_true.R``` and ```Run_WDnearest_prior_true.R``.
+- ```min_dist_nearest_timing.R``` Helper function for ```permutation_final_prior_true.R``` and ```Run_WDnearest_prior_true.R```.
 - ```pan_gain_probabilistic.py``` Produces figure 3B and supplementary figures 24 and 25.
 - ```parsimony_plots_with_bootstrapping.py``` Produces figure 3D and supplementary figures 15A,B and 16.
 - ```permutation_final_prior_true.R``` Precursor script for ```Sync_Gain_04092024.R```.
@@ -39,7 +39,7 @@ These scripts produce the figures for the manuscript.
 - ```plot_wgd_timing_event_proportions.py``` Produces figures 3F,G and supplementary figures 30-33.
 - ```plot_passage_cn_changes.R``` Produces figure 2B. Requires ```process_cn_passage_data.py``` to be run first.
 - ```PlotTiming_posteriors.R``` Helper script for ```Sync_Gain_04092024.R```.
-- ```PlotTiming.R``` Helper script for ```Sync_Gain_04092024.R``.
+- ```PlotTiming.R``` Helper script for ```Sync_Gain_04092024.R```.
 - ```pre_post_correlations_corrected.R``` Produces figures 4A,B and supplementary figures 37-41. Requires ```arm_pre_post.py``` to be run first.
 - ```pre_post_major_cn.py``` Produces supplementary figures 21.
 - ```pre_post_non_gain.py``` Precursor script to produce aggregated gain timing files. Required for ```arm_pre_post.py``` and ```event_proportions_relative_to_wgd_probabilistic.py```.
@@ -49,7 +49,7 @@ These scripts produce the figures for the manuscript.
 - ```route_calibration_plot.py``` Produces supplementary figures 8-11.
 - ```route_difference_analysis.py```Produces supplementary figures 13-14.
 - ```Run_WDnearest_prior_true.R``` Precursor script for ```Sync_Gain_04092024.R```.
-- ```Sync_Gain_04092024.R`` Precursor script for ```Sync_Gain_04092024.R```.
+- ```Sync_Gain_04092024.R``` Produces figures 3H,I and supplementary figures 34D-F.
 - ```timing_matchup_sim.py``` Produces figures 1H and supplementary figures 3-7.
 -  ```usarc_analysis_medicc.ipynb``` Produces figure 3A.
 - ```wgd_calling_analysis_script.py``` Produces supplementary figure 51.
