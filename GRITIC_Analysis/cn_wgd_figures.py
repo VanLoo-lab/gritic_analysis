@@ -32,7 +32,6 @@ def get_p_value_star(p_value):
 
 def load_cn_table():
     good_samples = DataTools.get_good_samples()
-
     cn_table = pd.read_csv('../output/cn_table_status.tsv', sep='\t')
     cn_table['Segment_Width']+=1
     cn_table = cn_table[cn_table['Sample_ID'].isin(good_samples)]

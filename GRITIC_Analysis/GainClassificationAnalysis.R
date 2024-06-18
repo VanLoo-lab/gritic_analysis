@@ -1,5 +1,5 @@
 
-GenomeSizes <- read.table("GenomeSizes.txt", header = T, sep = "\t")
+GenomeSizes <- read.table("../resources/GenomeSizes.txt", header = T, sep = "\t")
 source("GainClassifier.R")
 
 ## Packages

@@ -10,14 +10,10 @@ import DataTools
 from collections import Counter
 
 def load_nrpcc_table():
-    pcawg_nrpcc_table = pd.read_csv('../in_data/PCAWG_mut_clean_revisions_Hartwig_Pipeline/complete_nrpcc_table_PCAWG_mut_clean_revisions_Hartwig_Pipeline.tsv',sep="\t")
-    hartwig_nrpcc_table = pd.read_csv('../in_data/Hartwig_mut_clean_revisions/complete_nrpcc_table_Hartwig_mut_clean_revisions.tsv',sep="\t")
-    nrpcc_table = pd.concat([pcawg_nrpcc_table,hartwig_nrpcc_table])
-    return nrpcc_table
+    hartwig_nrpcc_table = pd.read_csv('../in_data/Hartwig/complete_nrpcc_table_Hartwig.tsv',sep="\t")
+    return hartwig_nrpcc_table
 def load_classifications():
-    classifications = pd.read_csv('../resources/pcawg_hartwig_unified_classifications.tsv',sep="\t")
-    classifications['Sample_ID'] = np.where(classifications['cohort']=='PCAWG',classifications['icgc_aliquot_id'],classifications['sample_id'])
-    classifications = classifications.rename(columns={'patient_id':'Donor_ID','cancer_type':'Cancer_Type'})
+    classifications = pd.read_csv('../in_data/cancer_type_classifications_all_samples.tsv',sep="\t")
     return classifications[['Donor_ID','Sample_ID','Cancer_Type']]
 
 def load_chr_sizes():
@@ -28,7 +24,7 @@ def load_chr_sizes():
     return chr_sizes
 def load_timing_table(apply_penalty,min_coverage=0.3):
     #read in the data
-    posterior_path = f'../../output/Hartwig_mut_clean_revisions/complete_posterior_table_penalty_{apply_penalty}_Hartwig_mut_clean_revisions.tsv'
+    posterior_path = f'../in_data/Hartwig/complete_posterior_table_penalty_{apply_penalty}.tsv'
     posterior_table = pd.read_csv(posterior_path,sep='\t',dtype={'Chromosome':str})
     min_cn = np.where(posterior_table['WGD_Timing'].isnull(),1,2)
     posterior_table = posterior_table[posterior_table['Major_CN']>=min_cn]
