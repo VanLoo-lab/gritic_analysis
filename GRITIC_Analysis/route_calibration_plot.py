@@ -21,8 +21,8 @@ def load_route_data(parsimony_only,parsimony_penalty,parsimony_routes):
     else:
         dataset = 'state_validation_all_routes'
 
-    route_table_path = f'../../output/{dataset}/complete_route_table_{dataset}.tsv'  
-    metadata_path = f'../../output/{dataset}/complete_metadata_table_{dataset}.tsv' 
+    route_table_path = f'../in_data/{dataset}/complete_route_table_{dataset}.tsv'  
+    metadata_path = f'../in_data/{dataset}/complete_metadata_table_{dataset}.tsv' 
     route_table = pd.read_csv(route_table_path, sep='\t',dtype={'Chromosome':str})
     route_table = route_table[['Sample_ID','Segment_ID','WGD_Status','Major_CN','Minor_CN','Route','N_Mutations','Probability','Average_N_Events','Average_Pre_WGD_Losses','Average_Post_WGD_Losses']].drop_duplicates()
     route_table = route_table[route_table['WGD_Status']]
@@ -200,6 +200,7 @@ small_bins = np.linspace(0,1,11)
 bin_data = get_bin_data(route_table, bins)
 
 bin_data_major_cn_combined = combine_major_cn(bin_data,use_bootstraps=False)
+
 bin_data_major_cn_combined.to_csv(f'../output/route_calibrations/bin_data_major_cn_combined_parsimony_only_{parsimony_only}_parsimony_penalty_{parsimony_penalty}_parsimony_routes_{parsimony_routes}.tsv',sep='\t',index=False)
 
 bootstrapped_bin_data = get_bootstrapped_bin_data(route_table, bins,parsimony_only,parsimony_penalty,parsimony_routes,n_bootstraps=250,overwrite=True)

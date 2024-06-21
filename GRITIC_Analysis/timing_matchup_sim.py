@@ -71,7 +71,7 @@ args = my_parser.parse_args()
 dataset = args.dataset
 apply_penalty = args.apply_penalty
 
-input_dir = Path(f'../../output/{dataset}/')
+input_dir = Path(f'../in_data/{dataset}/')
 
 plot_dir = Path(f'../plots/state_matchup_histograms/{dataset}_penalty_{apply_penalty}/')
 
